@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "workspaces": {
+            "value": [
+                {
+                    "name": "law-01",
+                    "identityType": "SystemAssigned",
+                    "disableLocalAuth": true,
+                    "enableDataExport": true,
+                    "retentionInDays": 30,
+                    "forceCmkForQuery": false,
+                    "enableLogAccessUsingOnlyResourcePermissions": true,
+                    "immediatePurgeDataOn30Days": true,
+                    "SkuName": "PerGB2018",
+                    "capacityReservationLevel": "2",
+                    "dailyQuotaGb": "1"
+                },
+                {
+                    "name": "law-02",
+                    "identityType": "SystemAssigned",
+                    "disableLocalAuth": true,
+                    "enableDataExport": true,
+                    "retentionInDays": 30,
+                    "forceCmkForQuery": false,
+                    "enableLogAccessUsingOnlyResourcePermissions": true,
+                    "immediatePurgeDataOn30Days": true,
+                    "SkuName": "PerGB2018",
+                    "capacityReservationLevel": "2",
+                    "dailyQuotaGb": "1"
+                }
+            ]
+        }
+    }
+}

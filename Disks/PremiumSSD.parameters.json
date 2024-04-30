@@ -1,0 +1,9 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "disks_VM_COMPUTE_01_disk2_8c789b6be5f645958ce9ebec1f4af4ba_name": {
+            "value": "VM-COMPUTE-01_disk2_8c789b6be5f645958ce9ebec1f4af4ba"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "disks_VM_COMPUTE_01_disk2_8c789b6be5f645958ce9ebec1f4af4ba_name": {
+            "defaultValue": "VM-COMPUTE-01_disk2_8c789b6be5f645958ce9ebec1f4af4ba",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Compute/disks",
+            "apiVersion": "2023-01-02",
+            "name": "[parameters('disks_VM_COMPUTE_01_disk2_8c789b6be5f645958ce9ebec1f4af4ba_name')]",
+            "location": "northeurope",
+            "sku": {
+                "name": "Premium_ZRS",
+                "tier": "Premium"
+            },
+            "properties": {
+                "creationData": {
+                    "createOption": "Empty"
+                },
+                "diskSizeGB": 2048,
+                "diskIOPSReadWrite": 7500,
+                "diskMBpsReadWrite": 250,
+                "encryption": {
+                    "type": "EncryptionAtRestWithPlatformKey"
+                },
+                "networkAccessPolicy": "DenyAll",
+                "publicNetworkAccess": "Disabled",
+                "diskState": "Attached",
+                "tier": "P40"
+            }
+        }
+    ]
+}
